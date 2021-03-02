@@ -1,1 +1,3 @@
-# A place to dump misc. scripts exploring ratings algorithms
+Exploratory rating scripts and algorithms
+
+
