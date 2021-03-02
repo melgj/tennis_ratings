@@ -1,5 +1,4 @@
 library(tidyverse)
-library(tidymodels)
 library(lubridate)
 library(data.table)
 library(doMC)
@@ -19,8 +18,8 @@ colSums(is.na(df))
 
 unique(df$round)
 
-df$round <- factor(df$round, levels = c("R128", "R64", "R32", "R16", "QF",
-                                        "RR", "BR", "SF", "F"), ordered = T)
+df$round <- factor(df$round, levels = c("R128", "R64", "R32", "R16", "RR",
+                                        "QF", "BR", "SF", "F"), ordered = T)
 
 glimpse(df)
 wta <- df %>% 
