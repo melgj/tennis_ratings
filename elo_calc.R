@@ -48,15 +48,15 @@ pl
 
 probP1 <- function(p1_rtng, p2_rtng){
   dij <- p2_rtng - p1_rtng
-  return(uij <- 1 / (1 + 10 ^ (dij/400)))
+  return(1 / (1 + 10 ^ (dij/400)))
 }
 
 newP1 <- function(m_res, oldP1, oldP2, k){
-  new <- oldP1 + k * (m_res - (1 / (1 + 10 ^ ((oldP2 - oldP1)/400))))
+  return(oldP1 + k * (m_res - (1 / (1 + 10 ^ ((oldP2 - oldP1)/400)))))
 }
 
 newP2 <- function(m_res, oldP1, oldP2, k){
-  new <- oldP2 + k * ((1 - m_res) - (1 / (1 + 10 ^ ((oldP1 - oldP2)/400))))
+  return(oldP2 + k * ((1 - m_res) - (1 / (1 + 10 ^ ((oldP1 - oldP2)/400)))))
 }
 
 # test elo probability functions
